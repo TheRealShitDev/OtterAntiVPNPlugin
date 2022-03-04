@@ -26,7 +26,7 @@ public class OtterCommand implements CommandExecutor {
                             OtterAntiVPN.getInstance().loadConfigSettings();
                             sender.sendMessage(ChatUtils.colour("&aReloaded config!"));
                         } else {
-                            sender.sendMessage(ChatUtils.colour("You do not have permission to do this command"));
+                            sender.sendMessage(ChatUtils.colour("&cYou do not have permission to do this command"));
                         }
                         break;
                     }
@@ -46,7 +46,17 @@ public class OtterCommand implements CommandExecutor {
                                 }
                             }
                         } else {
-                            sender.sendMessage(ChatUtils.colour("You do not have permission to do this command"));
+                            sender.sendMessage(ChatUtils.colour("&cYou do not have permission to do this command"));
+                        }
+                        break;
+                    }
+
+                    case "purge": {
+                        if (sender.hasPermission("otter.purge")) {
+                            OtterAntiVPN.getInstance().getOtterApi().cachedResults.clear();
+                            sender.sendMessage(ChatUtils.colour("&aPurged all cached IPs."));
+                        } else {
+                            sender.sendMessage(ChatUtils.colour("&cYou do not have permission to do this command"));
                         }
                         break;
                     }
@@ -59,7 +69,7 @@ public class OtterCommand implements CommandExecutor {
 
             }
         } else {
-            sender.sendMessage(ChatUtils.colour("You do not have permission to do this command"));
+            sender.sendMessage(ChatUtils.colour("&cYou do not have permission to do this command"));
         }
         return true;
     }
@@ -74,6 +84,9 @@ public class OtterCommand implements CommandExecutor {
         sender.sendMessage(ChatUtils.colour(""));
         sender.sendMessage(ChatUtils.colour("&7/otter reload"));
         sender.sendMessage(ChatUtils.colour("&8 -> &cReloads the plugin configuration."));
+        sender.sendMessage(ChatUtils.colour(""));
+        sender.sendMessage(ChatUtils.colour("&7/otter purge"));
+        sender.sendMessage(ChatUtils.colour("&8 -> &cDeletes all IP cache's."));
         sender.sendMessage(ChatUtils.colour("&7&m----------------------------------"));
     }
 

@@ -1,5 +1,5 @@
 name: OtterAntiVPN
-version: 1.2-Beta-Hotfix
+version: 1.3-Beta
 author: aSwitch
 description: A free adanced antivpn.
 main: xyz.owltech.otter.OtterAntiVPN
@@ -10,6 +10,8 @@ permissions:
   otter.reload:
     default: op
   otter.command:
+    default: op
+  otter.purge:
     default: op
   otter.bypass:
     description: Bypass permission
