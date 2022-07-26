@@ -16,6 +16,11 @@ public class OtterApi {
             return cachedResults.get(ip);
         }
 
+        // Returning localhost ips
+        if (ip.equals("127.0.0.1")) {
+            return false;
+        }
+
         try {
             final String response = networkUtils.getFromURL("http://139.99.209.173:2095/api/" + ip);
             final JSONObject json = new JSONObject(response);
