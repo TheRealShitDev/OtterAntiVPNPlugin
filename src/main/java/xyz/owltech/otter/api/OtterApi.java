@@ -25,7 +25,7 @@ public class OtterApi {
             final String response = networkUtils.getFromURL("http://139.99.209.173:2095/api/" + ip);
             final JSONObject json = new JSONObject(response);
 
-            boolean vpn = json.getBoolean("detected");
+            boolean vpn = json.getBoolean("proxy");
             cachedResults.put(ip, vpn);
 
             return vpn;

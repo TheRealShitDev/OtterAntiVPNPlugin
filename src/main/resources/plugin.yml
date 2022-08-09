@@ -1,8 +1,8 @@
 name: OtterAntiVPN
-version: 1.3-Beta
+version: 2.3
 author: aSwitch
 description: A free adanced antivpn.
-main: xyz.owltech.otter.OtterAntiVPN
+main: xyz.owltech.otter.spigot.OtterAntiVPN
 
 permissions:
   otter.alerts:

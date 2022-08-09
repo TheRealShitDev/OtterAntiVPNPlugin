@@ -1,13 +1,13 @@
-package xyz.owltech.otter;
+package xyz.owltech.otter.spigot;
 
 import lombok.Getter;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import xyz.owltech.otter.api.OtterApi;
-import xyz.owltech.otter.commands.OtterCommand;
-import xyz.owltech.otter.events.PlayerJoinEventListener;
-import xyz.owltech.otter.profile.ProfileManager;
+import xyz.owltech.otter.spigot.commands.OtterCommand;
+import xyz.owltech.otter.spigot.events.PlayerJoinEventListener;
+import xyz.owltech.otter.api.profile.ProfileManager;
 import xyz.owltech.otter.utils.Settings;
 
 import java.util.concurrent.ExecutorService;

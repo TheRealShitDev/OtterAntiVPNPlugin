@@ -1,11 +1,10 @@
-package xyz.owltech.otter.commands;
+package xyz.owltech.otter.spigot.commands;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import xyz.owltech.otter.OtterAntiVPN;
-import xyz.owltech.otter.profile.Profile;
+import xyz.owltech.otter.spigot.OtterAntiVPN;
 import xyz.owltech.otter.utils.ChatUtils;
 
 public class OtterCommand implements CommandExecutor {

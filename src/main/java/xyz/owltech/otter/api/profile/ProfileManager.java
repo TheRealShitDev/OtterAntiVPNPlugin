@@ -1,4 +1,4 @@
-package xyz.owltech.otter.profile;
+package xyz.owltech.otter.api.profile;
 
 import lombok.Getter;
 
